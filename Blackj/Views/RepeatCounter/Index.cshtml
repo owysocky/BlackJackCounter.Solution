@@ -1,0 +1,17 @@
+@using WordCounter.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+<div class="jumbotron">
+<h1> Your Word Count</h1>
+</div>
+<h3>Word: '@Model.GetWord()' </h3>
+<h3>Sentence: '@Model.GetSentence()'</h3>
+<h2>Your word '@Model.GetWord()' was used @Model.WordCounter() time/s.</h2>
+
+<a href="/repeatcouner/new">Find again</a>
+<br>
+<a href="/">Main page</a>
+</div>
