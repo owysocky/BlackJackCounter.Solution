@@ -23,7 +23,7 @@ namespace Blackj.Models
 
     public int GetTotalCardsUsed()
     {
-      return _totalCardsUsed++;
+      return _totalCardsUsed + 1;
     }
 
     public int GetTrueCount()

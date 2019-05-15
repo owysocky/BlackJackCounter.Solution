@@ -21,5 +21,12 @@ namespace Blackj.Tests
       int result = newCounter.GetRunningTotal(1);
       Assert.AreEqual(result, 1);
     }
+    [TestMethod]
+    public void GetTotalCardsUsed_CountCards_Int()
+    {
+      Counter newCounter = new Counter(0, 0, 0);
+      int result = newCounter.GetTotalCardsUsed();
+      Assert.AreEqual(result, 1);
+    }
   }
 }
