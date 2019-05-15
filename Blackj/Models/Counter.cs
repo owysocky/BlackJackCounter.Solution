@@ -21,6 +21,11 @@ namespace Blackj.Models
       return _runningTotal += input;
     }
 
+    public int GetTotalCardsUsed()
+    {
+      return _totalCardsUsed++;
+    }
+
     public int GetTrueCount()
     {
       int decksUsed = _totalCardsUsed / 52;
