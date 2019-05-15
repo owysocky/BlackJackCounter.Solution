@@ -5,19 +5,26 @@ namespace Blackj.Models
 {
   public class Counter
   {
-    private int runningTotal;
-    private int trueTotal;
-    private int totalCardsUsed;
+    private int _runningTotal;
+    private int _trueTotal;
+    private int _totalCardsUsed;
+
+    public Counter(int runningTotal, int trueTotal, int totalCardsUsed)
+    {
+      _runningTotal = runningTotal;
+      _trueTotal = trueTotal;
+      _totalCardsUsed = totalCardsUsed;
+    }
 
     public int GetRunningTotal(int input)
     {
-      return runningTotal += input;
+      return _runningTotal += input;
     }
 
     public int GetTrueCount()
     {
-      int decksUsed = totalCardsUsed / 52;
-      return runningTotal / (6 - decksUsed);
+      int decksUsed = _totalCardsUsed / 52;
+      return _runningTotal / (6 - decksUsed);
     }
   }
 }
