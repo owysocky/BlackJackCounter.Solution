@@ -8,7 +8,7 @@ namespace Blackj.Controllers
     [HttpGet("/")]
     public ActionResult Home()
     {
-      Counter newCounter = new Counter(0, 0, 0);
+      Counter newCounter = new Counter();
       return View(newCounter);
     }
 
@@ -18,10 +18,10 @@ namespace Blackj.Controllers
       return View();
     }
 
-    [HttpPost("/score")]
+    [HttpPost("/")]
     public ActionResult Score(string one)
     {
-      Counter newCounter = new Counter(0, 0, 0);
+      Counter newCounter = new Counter();
       newCounter.AddRunningTotal(int.Parse(one));
       return View("Home", newCounter);
     }

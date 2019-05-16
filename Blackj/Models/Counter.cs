@@ -9,11 +9,11 @@ namespace Blackj.Models
     private int _trueTotal;
     private int _totalCardsUsed;
 
-    public Counter(int runningTotal, int trueTotal, int totalCardsUsed)
+    public Counter()
     {
-      _runningTotal = runningTotal;
-      _trueTotal = trueTotal;
-      _totalCardsUsed = totalCardsUsed;
+      _runningTotal = 0;
+      _trueTotal = 0;
+      _totalCardsUsed = 0;
     }
 
     public int GetRunningTotal()
