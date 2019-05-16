@@ -11,5 +11,11 @@ namespace Blackj.Controllers
       Counter newCounter = new Counter(0, 0, 0);
       return View(newCounter);
     }
+
+    [Route("/form")]
+    public ActionResult Form()
+    {
+      return View();
+    }
   }
 }
