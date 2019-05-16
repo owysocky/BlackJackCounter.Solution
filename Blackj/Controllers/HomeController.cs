@@ -5,17 +5,25 @@ namespace Blackj.Controllers
 {
   public class Homecontroller : Controller
   {
-    [Route("/")]
+    [HttpGet("/")]
     public ActionResult Home()
     {
       Counter newCounter = new Counter(0, 0, 0);
       return View(newCounter);
     }
 
-    [Route("/form")]
+    [HttpGet("/form")]
     public ActionResult Form()
     {
       return View();
+    }
+
+    [HttpPost("/score")]
+    public ActionResult Score(string one)
+    {
+      Counter newCounter = new Counter(0, 0, 0);
+      newCounter.AddRunningTotal(int.Parse(one));
+      return View("Home", newCounter);
     }
   }
 }

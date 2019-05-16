@@ -16,7 +16,11 @@ namespace Blackj.Models
       _totalCardsUsed = totalCardsUsed;
     }
 
-    public int GetRunningTotal(int input)
+    public int GetRunningTotal()
+    {
+      return _runningTotal;
+    }
+    public int AddRunningTotal(int input)
     {
       return _runningTotal += input;
     }
