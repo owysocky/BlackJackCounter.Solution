@@ -7,5 +7,10 @@
   <body>
     <h1>Score</h1>
     <h2>@Model.GetRunningTotal()</h2>
+    <h4>If statement</h4>
+    @if (Model.GetTrueCount() >4)
+    {
+      <p>You can double your bet.</p>
+    }
   </body>
 </html>
